@@ -21,17 +21,7 @@ def min_heap(A,heap_size,i):
     if small != i:
         A[i], A[small] = A[small], A[i]
         max_heapify(A, heap_size, small)
-def min_heap(A,heap_size,i):
-    left = 2 * i + 1
-    right = 2 * i + 2
-    small = i
-    if left < heap_size and A[left] < A[small]:
-        small = left
-    if right < heap_size and A[right] < A[small]:
-        small = right
-    if small != i:
-        A[i], A[small] = A[small], A[i]
-        max_heapify(A, heap_size, small)
+
         
 def build_heap(A):
     heap_size = len(A)
